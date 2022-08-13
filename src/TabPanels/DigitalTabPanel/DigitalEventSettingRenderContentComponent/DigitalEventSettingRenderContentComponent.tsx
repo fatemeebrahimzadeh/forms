@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./DigitalEventSettingRenderContentComponent.scss"
-import Input from "../../Input/Input";
-import Checkbox from "../../Checkbox/Checkbox";
-import ColorPicker from "../../ColorPicker/ColorPicker";
-import { IDigitalTag } from "../../@types/entities/digitaltag";
+import Input from "../../../UI/Input/Input";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import ColorPicker from "../../../UI/ColorPicker/ColorPicker";
+import { IDigitalTag } from "../../../@types/entities/digitaltag";
 
 interface IProps extends IDigitalTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IDigitalTag) => void

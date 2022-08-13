@@ -4,7 +4,7 @@ import GeneralRenderContentComponent from "./GeneralRenderContentComponent/Gener
 import SensorSettingRenderContentComponent from "./SensorSettingRenderContentComponent/SensorSettingRenderContentComponent"
 import EventSettingRenderContentComponent from "./EventSettingRenderContentComponent/EventSettingRenderContentComponent"
 import CalibrationRenderContentComponent from "./CalibrationRenderContentComponent/CalibrationRenderContentComponent"
-import { ITag } from "../@types/entities/tag"
+import { ITag } from "../../@types/entities/tag"
 import "./TabPanel.scss"
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";

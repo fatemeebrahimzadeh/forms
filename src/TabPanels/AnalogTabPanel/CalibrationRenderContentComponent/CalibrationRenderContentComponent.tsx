@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { ITag } from "../../@types/entities/tag";
-import Checkbox from "../../Checkbox/Checkbox";
-import Input from "../../Input/Input";
+import { ITag } from "../../../@types/entities/tag";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Input from "../../../UI/Input/Input";
 import "./CalibrationRenderContentComponent.scss"
 
 interface IProps extends ITag {

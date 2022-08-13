@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import "./VirtualGeneralRenderContentComponent.scss"
-import Checkbox from "../../Checkbox/Checkbox"
-import Input from "../../Input/Input"
-import { IVirtualTag } from "../../@types/entities/virtual-tag";
-import Select from "../../Select/Select";
+import Checkbox from "../../../UI/Checkbox/Checkbox"
+import Input from "../../../UI/Input/Input"
+import { IVirtualTag } from "../../../@types/entities/virtual-tag";
+import Select from "../../../UI/Select/Select";
 
 interface IProps extends IVirtualTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IVirtualTag) => void

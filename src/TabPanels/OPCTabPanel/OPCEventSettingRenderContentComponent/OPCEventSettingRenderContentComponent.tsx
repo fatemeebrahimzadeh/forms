@@ -3,10 +3,10 @@ import React, { Component } from "react";
 
 
 import "./OPCEventSettingRenderContentComponent.scss"
-import Input from "../../Input/Input";
-import ColorPicker from "../../ColorPicker/ColorPicker";
-import Checkbox from "../../Checkbox/Checkbox";
-import { IOPCTag } from "../../@types/entities/opc-tag";
+import Input from "../../../UI/Input/Input";
+import ColorPicker from "../../../UI/ColorPicker/ColorPicker";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import { IOPCTag } from "../../../@types/entities/opc-tag";
 
 interface IProps extends IOPCTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IOPCTag) => void

@@ -2,10 +2,10 @@
 import { useContext, useEffect, useState } from "react";
 import "./MultipleTagsPanelHook.scss"
 import { FormulaContext, IFormulaPropsContext, IMainArray, isOperationOrParenthesBefore } from "../../../FormulaRenderContentComponent";
-import Input from "../../../../../Input/Input";
+import Input from "../../../../../../UI/Input/Input";
 import { faSearch, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Checkbox from "../../../../../Checkbox/Checkbox";
+import Checkbox from "../../../../../../UI/Checkbox/Checkbox";
 import { ITagWithMode } from "../TagPanelHook/TagPanelHook"
 
 export default function MultipleTagsPanelHook(): JSX.Element {

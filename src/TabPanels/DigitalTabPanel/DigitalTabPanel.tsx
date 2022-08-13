@@ -5,7 +5,7 @@ import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 import DigitalGeneralRenderContentComponent from "./DigitalGeneralRenderContentComponent/DigitalGeneralRenderContentComponent";
 import DigitalEventSettingRenderContentComponent from "./DigitalEventSettingRenderContentComponent/DigitalEventSettingRenderContentComponent";
-import { IDigitalTag } from "../@types/entities/digitaltag";
+import { IDigitalTag } from "../../@types/entities/digitaltag";
 
 interface IProps {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IDigitalTag) => void

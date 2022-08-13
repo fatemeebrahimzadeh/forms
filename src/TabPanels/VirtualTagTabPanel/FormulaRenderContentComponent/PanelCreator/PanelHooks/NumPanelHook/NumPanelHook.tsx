@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./NumPanelHook.scss"
-import TextArea from "../../../../../TextArea/TextArea";
+import TextArea from "../../../../../../UI/TextArea/TextArea";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormulaContext, IFormulaPropsContext, isOperationOrParenthesBefore } from "../../../FormulaRenderContentComponent";

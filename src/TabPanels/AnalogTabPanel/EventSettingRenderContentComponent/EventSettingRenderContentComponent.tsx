@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./EventSettingRenderContentComponent.scss"
-import { ITag } from "../../@types/entities/tag";
-import Input from "../../Input/Input";
-import Checkbox from "../../Checkbox/Checkbox";
-import Select from "../../Select/Select";
-import ColorPicker from "../../ColorPicker/ColorPicker";
+import { ITag } from "../../../@types/entities/tag";
+import Input from "../../../UI/Input/Input";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Select from "../../../UI/Select/Select";
+import ColorPicker from "../../../UI/ColorPicker/ColorPicker";
 
 interface IProps extends ITag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof ITag) => void

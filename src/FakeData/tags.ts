@@ -1,4 +1,4 @@
-import { ITag } from "./@types/entities/tag";
+import { ITag } from "../@types/entities/tag";
 
 export default function Tag(): ITag[] {
     return [

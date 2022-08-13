@@ -6,7 +6,7 @@ import OPCEventSettingRenderContentComponent from "./OPCEventSettingRenderConten
 import "./OPCTabPanel.scss"
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
-import { IOPCTag } from "../@types/entities/opc-tag";
+import { IOPCTag } from "../../@types/entities/opc-tag";
 
 interface IProps {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IOPCTag) => void

@@ -1,12 +1,12 @@
 import React, { Dispatch, FC, useContext, useEffect, useState } from "react";
-import TextArea from "../../TextArea/TextArea";
+import TextArea from "../../../UI/TextArea/TextArea";
 import "./FormulaRenderContentComponent.scss"
 import { createPanel } from "./PanelCreator/PanelCreator"
 import NumPanelCreator from "./PanelCreator/NumPanelCreator/NumPanelCreator"
 import TagPanelCreator from "./PanelCreator/TagPanelCreator/TagPanelCreator";
 import MultipleTagsPanelCreator from "./PanelCreator/MultipleTagsPanelCreator/MultipleTagsPanelCreator";
-import { ITag } from "../../@types/entities/tag";
-import { IVirtualTag } from "../../@types/entities/virtual-tag";
+import { ITag } from "../../../@types/entities/tag";
+import { IVirtualTag } from "../../../@types/entities/virtual-tag";
 
 export type ITagsAndNumbersTabs = "Num" | "Tag" | "Min" | "Ave" | "Max"
 export type IOperationKeys = "C" | "<-" | "(" | ")" | "+" | "-" | "*" | "/"

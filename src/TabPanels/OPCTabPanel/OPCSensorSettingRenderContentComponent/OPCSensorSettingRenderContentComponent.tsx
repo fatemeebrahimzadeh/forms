@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./OPCSensorSettingRenderContentComponent.scss"
 
-import Checkbox from "../../Checkbox/Checkbox";
-import Input from "../../Input/Input";
-import { IOPCTag } from "../../@types/entities/opc-tag";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Input from "../../../UI/Input/Input";
+import { IOPCTag } from "../../../@types/entities/opc-tag";
 
 interface IProps extends IOPCTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IOPCTag) => void

@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 
 import "./GeneralRenderContentComponent.scss"
-import { ITag } from "../../@types/entities/tag"
-import Checkbox from "../../Checkbox/Checkbox"
-import Input from "../../Input/Input"
+import { ITag } from "../../../@types/entities/tag"
+import Checkbox from "../../../UI/Checkbox/Checkbox"
+import Input from "../../../UI/Input/Input"
 
 interface IProps extends ITag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof ITag) => void

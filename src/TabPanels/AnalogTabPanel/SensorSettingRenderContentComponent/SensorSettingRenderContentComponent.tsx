@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./SensorSettingRenderContentComponent.scss"
-import { ITag } from "../../@types/entities/tag";
-import Checkbox from "../../Checkbox/Checkbox";
-import Input from "../../Input/Input";
-import Select from "../../Select/Select";
+import { ITag } from "../../../@types/entities/tag";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Input from "../../../UI/Input/Input";
+import Select from "../../../UI/Select/Select";
 
 interface IProps extends ITag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof ITag) => void

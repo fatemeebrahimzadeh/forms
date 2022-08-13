@@ -1,10 +1,10 @@
 import React, { Component, createRef } from "react"
 
 import "./OPCGeneralRenderContentComponent.scss"
-import { IOPCTag } from "../../@types/entities/opc-tag"
-import Checkbox from "../../Checkbox/Checkbox"
-import Input from "../../Input/Input"
-import TextArea from "../../TextArea/TextArea"
+import { IOPCTag } from "../../../@types/entities/opc-tag"
+import Checkbox from "../../../UI/Checkbox/Checkbox"
+import Input from "../../../UI/Input/Input"
+import TextArea from "../../../UI/TextArea/TextArea"
 
 interface IProps extends IOPCTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IOPCTag) => void

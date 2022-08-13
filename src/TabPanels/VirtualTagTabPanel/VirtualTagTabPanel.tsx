@@ -4,8 +4,8 @@ import VirtualGeneralRenderContentComponent from "./VirtualGeneralRenderContentC
 import FormulaRenderContentComponent, { IFormulaPropsContext } from "./FormulaRenderContentComponent/FormulaRenderContentComponent"
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
-import { ITag } from "../@types/entities/tag";
-import { IVirtualTag } from "../@types/entities/virtual-tag";
+import { ITag } from "../../@types/entities/tag";
+import { IVirtualTag } from "../../@types/entities/virtual-tag";
 
 interface IProps {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IVirtualTag) => void

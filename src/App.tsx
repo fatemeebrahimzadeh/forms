@@ -1,18 +1,20 @@
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
 import { useState } from 'react';
 import './App.css';
-import Popup, { IPopupActions } from './Popup/Popup';
-import TabPanel from './TabPanel/TabPanel';
+import Popup, { IPopupActions } from './UI/Popup/Popup';
+import TabPanel from './TabPanels/AnalogTabPanel/TabPanel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { IDigitalTag } from './@types/entities/digitaltag';
 import { IVirtualTag } from './@types/entities/virtual-tag';
 import { IOPCTag } from './@types/entities/opc-tag';
-import DigitalTabPanelComponent from './DigitalTabPanel/DigitalTabPanel';
-import VirtualTagTabPanelComponent from './VirtualTagTabPanel/VirtualTagTabPanel';
-import OPCTabPanel from './OPCTabPanel/OPCTabPanel';
-import Tag from './tags';
+import DigitalTabPanelComponent from './TabPanels/DigitalTabPanel/DigitalTabPanel';
+import VirtualTagTabPanelComponent from './TabPanels/VirtualTagTabPanel/VirtualTagTabPanel';
+import OPCTabPanel from './TabPanels/OPCTabPanel/OPCTabPanel';
+import Tag from './FakeData/tags';
 import { ITag } from './@types/entities/tag';
 
 interface IState {

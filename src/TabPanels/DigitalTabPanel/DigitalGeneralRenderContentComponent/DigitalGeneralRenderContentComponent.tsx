@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import { IDigitalTag } from "../../@types/entities/digitaltag"
+import { IDigitalTag } from "../../../@types/entities/digitaltag"
 import "./DigitalGeneralRenderContentComponent.scss"
-import Checkbox from "../../Checkbox/Checkbox";
-import Input from "../../Input/Input"
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Input from "../../../UI/Input/Input"
 
 interface IProps extends IDigitalTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IDigitalTag) => void
