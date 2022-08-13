@@ -1,0 +1,65 @@
+.NumPanel {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "NumPanel__textarea NumPanel__UploadIcon"
+        "NumPanel__NumberKeys NumPanel__UploadIcon";
+
+    .Textarea {
+        grid-area: NumPanel__textarea;
+        height: 40px;
+
+        .NumPanel__textarea {
+            width: 350px;
+            height: 40px;
+            padding: 3px;
+            padding-left: 5px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    .NumPanel__UploadIcon {
+        grid-area: NumPanel__UploadIcon;
+        width: 50px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background-color: #e8e8e8;
+        color: #464255;
+        margin: 2px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: 0 0 5px #4642556b;
+        }
+    }
+
+    .NumPanel__NumberKeys {
+        grid-area: NumPanel__NumberKeys;
+        width: 350px;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        .numberKey {
+            width: 100px;
+            height: 40px;
+            background: #ffffff;
+            border: 1px solid #e2e2e2;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+
+            &:hover {
+                box-shadow: 0 0 11px #e2e2e2;
+            }
+        }
+    }
+}

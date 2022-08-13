@@ -1,0 +1,111 @@
+.OPCGeneralRenderContentComponent {
+    padding-top: 10px;
+
+    .first-fieldset {
+        padding: 10px !important;
+        display: grid;
+        grid-template-areas:
+            "first-fieldset__TIDLabel first-fieldset__ACTLabel"
+            "first-fieldset__DESLabel first-fieldset__ARCLabel"
+            "first-fieldset__NSLabel first-fieldset__NIDLabel"
+            "first-fieldset__SOALabel first-fieldset__SOALabel";
+
+        .first-fieldset__TIDLabel {
+            grid-area: first-fieldset__TIDLabel;
+        }
+
+        .first-fieldset__DESLabel {
+            grid-area: first-fieldset__DESLabel;
+        }
+
+        .first-fieldset__ACTLabel {
+            grid-area: first-fieldset__ACTLabel;
+        }
+
+        .first-fieldset__ARCLabel {
+            grid-area: first-fieldset__ARCLabel;
+        }
+
+        .first-fieldset__NSLabel {
+            grid-area: first-fieldset__NSLabel;
+        }
+
+        .first-fieldset__NIDLabel {
+            grid-area: first-fieldset__NIDLabel;
+
+            span {
+                width: 90px !important;
+            }
+        }
+
+        .first-fieldset__SOALabel {
+            grid-area: first-fieldset__SOALabel;
+
+            .Textarea {
+                width: 80%;
+
+                .first-fieldset__SOATextArea {
+                    width: 88%;
+                    height: 80px;
+                }
+            }
+        }
+
+        label:not(.CheckboxLabel) {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 120px;
+            }
+
+            .validation-group-messages {
+                .error-message {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .CheckboxLabel {
+            padding: 10px;
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .second-fieldset {
+        padding: 20px !important;
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            display: flex;
+
+            span {
+                width: 70px;
+            }
+
+            .validation-group-messages {
+                .error-message {
+                    top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .OPCGeneralRenderContentComponent {
+        .second-fieldset {
+            div {
+                label {
+                    .input-field {
+                        width: 70%;
+                        min-width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}

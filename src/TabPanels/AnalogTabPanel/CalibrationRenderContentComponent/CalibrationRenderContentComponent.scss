@@ -1,0 +1,15 @@
+.Calibration {
+    padding-top: 10px;
+    
+    fieldset {
+        padding: 10px !important;
+        label {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 100px;
+            }
+        }
+    }
+}

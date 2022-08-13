@@ -1,0 +1,61 @@
+.DigitalEventSettingRenderContentComponent {
+    padding-top: 10px;
+    
+    fieldset {
+        padding: 20px !important;
+        display: flex;
+        flex-direction: column;
+
+        .CheckboxLabel {
+            span {
+                padding-left: 5px;
+            }
+        }
+
+        label:not(.CheckboxLabel) {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+
+            span:not(.MessageSpan) {
+                min-width: 100px;
+            }
+
+            .MessageSpan {
+                min-width: 60px;
+            }
+
+            .twitter-picker {
+                div:nth-child(2) {
+                    left: 212px !important;
+                }
+            }
+
+            .picker-plot {
+                position: absolute;
+                z-index: 100;
+                left: -200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .DigitalEventSettingRenderContentComponent {
+        fieldset {
+            label:not(.CheckboxLabel) {
+                .custom-input {
+                    width: 30%;
+                    .input__details {
+                        width: inherit;
+                        .input-field {
+                            width: inherit;
+                            min-width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

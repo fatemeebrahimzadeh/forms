@@ -1,0 +1,78 @@
+.VirtualGeneralRenderContentComponent {
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+        "first-fieldset first-fieldset"
+        "second-fieldset third-fieldset";
+    gap: 10px;
+
+    .first-fieldset {
+        grid-area: first-fieldset;
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+
+        label:not(.CheckboxLabel) {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 100px;
+            }
+
+            .validation-group-messages {
+                .error-message {
+                    width: 100%;
+                }
+            }
+        }
+
+        .CheckboxLabel {
+            padding: 5px 5px 5px 10px;
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .second-fieldset {
+        grid-area: second-fieldset;
+        label {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 100px;
+            }
+        }
+    }
+
+    .third-fieldset {
+        grid-area: third-fieldset;
+        padding: 20px !important;
+
+        label {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .GeneralRenderContentComponent {
+        .second-fieldset {
+            div {
+                label {
+                    .input-field {
+                        width: 70%;
+                        min-width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}

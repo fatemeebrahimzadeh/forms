@@ -1,0 +1,79 @@
+.GeneralRenderContentComponent {
+    padding-top: 10px;
+
+    .first-fieldset {
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+
+        label:not(.CheckboxLabel) {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 100px;
+            }
+
+            .validation-group-messages {
+                .error-message {
+                    width: 100%;
+                }
+            }
+        }
+
+        .CheckboxLabel {
+            padding: 5px 5px 5px 10px;
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .second-fieldset {
+        padding: 20px !important;
+
+        div {
+            display: flex;
+            padding-bottom: 5px;
+
+            label:first-child {
+                width: 50%;
+            }
+
+            label {
+                display: flex;
+
+                span {
+                    width: 100px;
+                }
+
+                .validation-group-messages {
+                    .error-message {
+                        top: 20px;
+                    }
+                }
+            }
+        }
+
+        .CheckboxLabel {
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .GeneralRenderContentComponent {
+        .second-fieldset {
+            div {
+                label {
+                    .input-field {
+                        width: 70%;
+                        min-width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}

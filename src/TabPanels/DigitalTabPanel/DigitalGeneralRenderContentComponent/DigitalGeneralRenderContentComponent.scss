@@ -1,0 +1,30 @@
+.DigitalGeneralRenderContentComponent {
+    padding-top: 10px;
+
+    fieldset {
+        padding: 20px !important;
+        display: flex;
+        flex-direction: column;
+        label {
+            display: flex;
+            padding: 10px;
+
+            span {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .DigitalGeneralRenderContentComponent {
+        fieldset {
+            label {
+                .input-field {
+                    width: 50%;
+                    min-width: 70px;
+                }
+            }
+        }
+    }
+}

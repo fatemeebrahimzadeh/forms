@@ -1,0 +1,210 @@
+.OPCEventSetting {
+    padding-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+
+    .EventSetting-first-fieldset {
+        padding: 20px !important;
+        display: flex;
+        justify-content: space-around;
+
+        .Hysterisis-label {
+            display: flex;
+            span {
+                padding-right: 5px;
+            }
+        }
+
+        .CheckboxLabel {
+            span {
+                padding-left: 5px;
+            }
+        }
+    }
+
+    fieldset:not(.EventSetting-first-fieldset) {
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+        // overflow-y: auto;
+
+        label {
+            margin: 5px;
+
+            .input-field {
+                width: 150px;
+            }
+
+            .color-picker {
+                display: flex;
+                justify-content: center;
+
+                .twitter-picker {
+                    top: 33px;
+                    div:nth-child(2) {
+                        left: 212px !important;
+                    }
+                }
+
+                .picker-plot {
+                    position: absolute;
+                    z-index: 100;
+                    left: -178px;
+                }
+            }
+
+            .last-colour-picker {
+                .twitter-picker {
+                    div:nth-child(2),
+                    div:first-child {
+                        border-width: 0px 0px 10px !important;
+                    }
+                }
+
+                .picker-plot {
+                    position: absolute;
+                    z-index: 100;
+                    top: -100px;
+                    left: -178px;
+                }
+            }
+
+            .invalid-input {
+                .validation-group-messages {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        label:not(.NormalLabel) {
+            display: grid;
+            grid-template-columns: 140px 180px 100px 155px 120px;
+        }
+
+        .NormalLabel {
+            display: grid;
+            grid-template-columns: 320px 100px 155px 120px;
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    .OPCEventSetting {
+        fieldset:not(.EventSetting-first-fieldset) {
+            label {
+                .custom-input {
+                    width: 30%;
+                    .input__details {
+                        width: inherit;
+                        .input-field {
+                            width: inherit;
+                            min-width: 120px;
+                        }
+                    }
+                }
+            }
+
+            label:not(.NormalLabel) {
+                display: grid;
+                grid-template-columns: 110px 130px 60px 130px 60px 100px 80px;
+            }
+
+            .NormalLabel {
+                display: grid;
+                grid-template-columns: 240px 60px 130px 60px 100px 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1700px) {
+    .OPCEventSetting {
+        fieldset:not(.EventSetting-first-fieldset) {
+            label {
+                .custom-input {
+                    width: 30%;
+                    .input__details {
+                        width: inherit;
+                        .input-field {
+                            width: inherit;
+                            min-width: 70px;
+                        }
+                    }
+                }
+            }
+
+            label:not(.NormalLabel) {
+                display: grid;
+                grid-template-columns: 110px 100px 70px 100px 60px 80px 70px;
+            }
+
+            .NormalLabel {
+                display: grid;
+                grid-template-columns: 210px 70px 100px 60px 80px 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .OPCEventSetting {
+        .EventSetting-first-fieldset {
+            flex-direction: column;
+            .CheckboxLabel {
+                padding-bottom: 5px;
+            }
+        }
+
+        fieldset:not(.EventSetting-first-fieldset) {
+            label {
+                .custom-input {
+                    width: 30%;
+                    .input__details {
+                        width: inherit;
+                        .input-field {
+                            width: inherit;
+                            min-width: 70px;
+                        }
+                    }
+                }
+            }
+
+            label:not(.NormalLabel) {
+                display: grid;
+                grid-template-columns: 110px 80px 60px 80px 60px 50px 80px;
+            }
+
+            .NormalLabel {
+                display: grid;
+                grid-template-columns: 190px 60px 80px 60px 50px 80px;
+            }
+        }
+    }
+}
+
+@media (max-height: 800px) {
+    .OPCEventSetting {
+        fieldset:not(.EventSetting-first-fieldset) {
+            label {
+                .color-picker {
+                    display: flex;
+                    justify-content: center;
+
+                    .twitter-picker {
+                        top: 33px;
+                        div:nth-child(2) {
+                            left: 212px !important;
+                        }
+                    }
+
+                    .picker-plot {
+                        position: absolute;
+                        z-index: 100;
+                        left: -178px;
+                    }
+                }
+            }
+        }
+    }
+}
