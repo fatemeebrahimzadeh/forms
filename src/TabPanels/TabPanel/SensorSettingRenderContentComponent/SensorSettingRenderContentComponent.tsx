@@ -30,6 +30,7 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
         this.timeout = undefined
     }
 
+
     componentDidUpdate() {
         this.timeout && clearTimeout(this.timeout)
     }
@@ -43,24 +44,31 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
     }
 
     sntHandler = (isCalculateSNT: boolean) => {
-        if (isCalculateSNT) {
 
-            let SNT = this.st + (this.ft * 128) + (this.ip * 256)
-            this.props.onChangeHandler(SNT, 'SNT')
-
-        } else {
-
-            this.st = this.props.SNT
+        if (true) {
+            this.st = 0
             this.ip = 0
-            this.ft = 0
+            this.ft = 1
+        } else {
+            if (isCalculateSNT) {
 
-            if (this.st >= 256) {
-                this.ip = 1
-                this.st -= 256
-            }
-            if (this.st >= 128) {
-                this.ft = 1
-                this.st -= 128
+                let SNT = this.st + (this.ft * 128) + (this.ip * 256)
+                this.props.onChangeHandler(SNT, 'SNT')
+
+            } else {
+
+                this.st = this.props.SNT
+                this.ip = 0
+                this.ft = 0
+
+                if (this.st >= 256) {
+                    this.ip = 1
+                    this.st -= 256
+                }
+                if (this.st >= 128) {
+                    this.ft = 1
+                    this.st -= 128
+                }
             }
         }
 
@@ -86,58 +94,56 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
                             Scale
                         </label>
                     </legend>
-                    <div>
-                        <label >
-                        </label>
-                        <div className="SensorSetting__first-fieldset-labels">
-                            <label >
-                                Low
-                            </label>
-                            <label >
-                                High
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <label>
-                            Raw Value Range
-                        </label>
-                        <div className="SensorSetting__first-fieldset-inputs">
-                            {/*  Low */}
-                            <Input
-                                type="number"
-                                id="spn"
-                                value={this.props.SPN.toString()}
-                                enable={this.enabledScaleFieldset}
-                                onChange={(value) => this.props.onChangeHandler(Number(value), 'SPN')} />
-                            {/*High  */}
-                            <Input
-                                type="number"
-                                id="spx"
-                                value={this.props.SPX.toString()}
-                                enable={this.enabledScaleFieldset}
-                                onChange={(value) => this.props.onChangeHandler(Number(value), 'SPX')} />
-                        </div>
-                    </div>
-                    <div>
-                        <label>
-                            Scaled Value Range
-                        </label>
-                        <div className="SensorSetting__first-fieldset-inputs">
-                            <Input
-                                type="number"
-                                id="ssn"
-                                value={this.props.SSN.toString()}
-                                enable={this.enabledScaleFieldset}
-                                onChange={(value) => this.props.onChangeHandler(Number(value), 'SSN')} />
-                            <Input
-                                type="number"
-                                id="ssx"
-                                value={this.props.SSX.toString()}
-                                enable={this.enabledScaleFieldset}
-                                onChange={(value) => this.props.onChangeHandler(Number(value), 'SSX')} />
-                        </div>
-                    </div>
+                    <label className="emptyLable">
+                    </label>
+                    <label className="lowLable">
+                        Low
+                    </label>
+                    <label className="highLable">
+                        High
+                    </label>
+                    <label className="rawLable">
+                        Raw Value Range
+                    </label>
+                    {/*  Low */}
+                    <Input
+                        className="spnInput"
+                        type="number"
+                        id="spn"
+                        value={this.props.SPN.toString()}
+                        enable={this.enabledScaleFieldset}
+                        onChange={(value) => this.props.onChangeHandler(Number(value), 'SPN')}
+                    />
+                    {/*High  */}
+                    <Input
+                        className="spxInput"
+                        type="number"
+                        id="spx"
+                        value={this.props.SPX.toString()}
+                        enable={this.enabledScaleFieldset}
+                        onChange={(value) => this.props.onChangeHandler(Number(value), 'SPX')}
+                    />
+
+                    <label className="scaledLable">
+                        Scaled Value Range
+                    </label>
+                    <Input
+                        className="ssnInput"
+                        type="number"
+                        id="ssn"
+                        value={this.props.SSN.toString()}
+                        enable={this.enabledScaleFieldset}
+                        onChange={(value) => this.props.onChangeHandler(Number(value), 'SSN')}
+                    />
+                    <Input
+                        className="ssxInput"
+                        type="number"
+                        id="ssx"
+                        value={this.props.SSX.toString()}
+                        enable={this.enabledScaleFieldset}
+                        onChange={(value) => this.props.onChangeHandler(Number(value), 'SSX')}
+                    />
+
                 </fieldset>
                 <fieldset className="outer-field">
                     <legend>Sensor Settings</legend>
@@ -160,7 +166,7 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
                             onChange={(value) => { this.ft = value; this.sntHandler(true); }}
                             options={[{ value: "null", text: "" }, { value: "0", text: "Strong" }, { value: "1", text: "Normal" }]} />
                     </label>
-                    <label >
+                    <label className="CheckboxLabel">
                         <span>Invert Polarity</span>
                         <Checkbox
                             id="ip"
@@ -175,7 +181,8 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
                             enable
                             id="unt"
                             value={this.props.UNT}
-                            onChange={(value) => this.props.onChangeHandler(value, 'UNT')} />
+                            onChange={(value) => this.props.onChangeHandler(value, 'UNT')}
+                        />
                     </label>
                     <label >
                         <span>Float</span>
@@ -184,7 +191,9 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
                             type="number"
                             id="flt"
                             value={this.props.FLT.toString()}
-                            onChange={(value) => this.props.onChangeHandler(Number(value), 'FLT')} />
+                            onChange={(value) => this.props.onChangeHandler(Number(value), 'FLT')}
+
+                        />
                     </label>
                 </fieldset>
                 <fieldset className="outer-field">
@@ -206,7 +215,8 @@ class SensorSettingRenderContentComponent extends Component<IProps> {
                             id="cvl"
                             value={this.props.CVL.toString()}
                             enable={this.enabledCompensationFieldset}
-                            onChange={(value) => this.props.onChangeHandler(Number(value), 'CVL')} />
+                            onChange={(value) => this.props.onChangeHandler(Number(value), 'CVL')}
+                        />
                     </label>
                 </fieldset>
             </section>

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import "./VirtualGeneralRenderContentComponent.scss"
-import Checkbox from "../../../UI/Checkbox/Checkbox"
-import Input from "../../../UI/Input/Input"
 import { IVirtualTag } from "../../../@types/entities/virtual-tag";
+import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Input from "../../../UI/Input/Input";
 import Select from "../../../UI/Select/Select";
 
 interface IProps extends IVirtualTag {
@@ -57,6 +57,7 @@ class GeneralRenderContentComponent extends Component<IProps> {
                             id="flt"
                             value={this.props.FLT.toString()}
                             onChange={(value) => this.props.onChangeHandler(Number(value), 'FLT')}
+                            groupName="VirtualTabPanel"
                         />
                     </label>
                     <label >
@@ -66,7 +67,7 @@ class GeneralRenderContentComponent extends Component<IProps> {
                             id="unt"
                             value={this.props.UNT}
                             onChange={(value) => this.props.onChangeHandler(value, 'UNT')}
-                        />
+                            groupName="VirtualTabPanel" />
                     </label>
                     <label >
                         <span>Virtual Type</span>
@@ -87,7 +88,7 @@ class GeneralRenderContentComponent extends Component<IProps> {
                             type="number"
                             value={this.props.VMN.toString()}
                             onChange={(value) => this.props.onChangeHandler(Number(value), 'VMN')}
-                        />
+                            groupName="VirtualTabPanel" />
                     </label>
                     <label >
                         <span>Maximum</span>
@@ -97,7 +98,7 @@ class GeneralRenderContentComponent extends Component<IProps> {
                             type="number"
                             value={this.props.VMX.toString()}
                             onChange={(value) => this.props.onChangeHandler(Number(value), 'VMX')}
-                        />
+                            groupName="VirtualTabPanel" />
                     </label>
                 </fieldset>
             </section>

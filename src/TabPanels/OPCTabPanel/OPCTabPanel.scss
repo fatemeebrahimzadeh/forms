@@ -17,38 +17,13 @@
     input {
         outline: none;
     }
+}
 
-    // .output-select {
-    //     width: 8%;
-
-    //     .fieldset__label {
-    //         margin: 6px;
-    //     }
-    // }
-
-    // .row {
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     margin-bottom: 20px;
-    // }
-
-    // .dx-multiview-wrapper {
-    //     width: 100%;
-    //     height: 90%;
-    //     outline: none;
-    //     overflow-y: auto;
-    // }
-
-    // .dx-tabpanel-container {
-    //     padding: 0px !important;
-    //     margin: 0px !important;
-    //     width: 100%;
-    //     max-height: 100%;
-    // }
-
-    // .dx-multiview-wrapper section {
-    //     max-height: 100%;
-    //     overflow: auto;
-    //     z-index: 1000;
-    // }
+@media (max-width: 850px) {
+    .Popup__OPCTabPanel {
+        .outer-field {
+            margin: 3px 6px !important;
+            padding: 8px !important;
+        }
+    }
 }

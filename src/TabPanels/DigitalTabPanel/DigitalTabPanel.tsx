@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import TabPanel, { Item } from "devextreme-react/tab-panel"
+
+
+
 import "./DigitalTabPanel.scss"
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import { IDigitalTag } from "../../../@types/entities/digitaltag"
-import "./DigitalGeneralRenderContentComponent.scss"
-import Checkbox from "../../../UI/Checkbox/Checkbox";
+import Checkbox from "../../../UI/Checkbox/Checkbox"
 import Input from "../../../UI/Input/Input"
+import "./DigitalGeneralRenderContentComponent.scss"
 
 interface IProps extends IDigitalTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IDigitalTag) => void
@@ -42,7 +42,7 @@ class DigitalGeneralRenderContentComponent extends Component<IProps> {
                             id="deb"
                             value={this.props.DEB.toString()}
                             onChange={(value) => this.props.onChangeHandler(Number(value), 'DEB')}
-                            groupName="DigitalTabPanel" />
+                        />
                     </label>
                     <label >
                         <span>Active</span>

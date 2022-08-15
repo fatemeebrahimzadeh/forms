@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import TabPanel, { Item } from "devextreme-react/tab-panel"
+
+
 import GeneralRenderContentComponent from "./GeneralRenderContentComponent/GeneralRenderContentComponent"
 import SensorSettingRenderContentComponent from "./SensorSettingRenderContentComponent/SensorSettingRenderContentComponent"
 import EventSettingRenderContentComponent from "./EventSettingRenderContentComponent/EventSettingRenderContentComponent"
 import CalibrationRenderContentComponent from "./CalibrationRenderContentComponent/CalibrationRenderContentComponent"
-import { ITag } from "../../@types/entities/tag"
+
 import "./TabPanel.scss"
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
+import { ITag } from "../../@types/entities/tag";
 
 interface IProps {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof ITag) => void
@@ -37,6 +40,7 @@ class TabPanelComponent extends Component<IProps> {
                 <Item title="General" >
                     {this.props.show && <GeneralRenderContentComponent
                         onChangeHandler={this.props.onChangeHandler}
+                        // TIDMessage={props.TIDMessage}
                         {...this.props.data} />}
                 </Item>
                 <Item title="Sensor Setting" >

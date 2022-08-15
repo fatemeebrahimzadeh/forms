@@ -10,6 +10,7 @@ interface IProps extends ITag {
 }
 
 class GeneralRenderContentComponent extends Component<IProps> {
+
     render() {
         return (
             <section className="GeneralRenderContentComponent">
@@ -20,7 +21,8 @@ class GeneralRenderContentComponent extends Component<IProps> {
                             enable
                             id="tid"
                             value={this.props.TID}
-                            onChange={(value) => this.props.onChangeHandler(value, 'TID')} />
+                            onChange={(value) => this.props.onChangeHandler(value, 'TID')}
+                        />
                     </label>
                     <label >
                         <span>Description</span>
@@ -55,7 +57,8 @@ class GeneralRenderContentComponent extends Component<IProps> {
                                 id="vmn"
                                 type="number"
                                 value={this.props.VMN.toString()}
-                                onChange={(value) => this.props.onChangeHandler(Number(value), 'VMN')} />
+                                onChange={(value) => this.props.onChangeHandler(Number(value), 'VMN')}
+                            />
                         </label>
                         <label >
                             <span>Maximum</span>
@@ -64,7 +67,8 @@ class GeneralRenderContentComponent extends Component<IProps> {
                                 id="vmx"
                                 type="number"
                                 value={this.props.VMX.toString()}
-                                onChange={(value) => this.props.onChangeHandler(Number(value), 'VMX')} />
+                                onChange={(value) => this.props.onChangeHandler(Number(value), 'VMX')}
+                            />
                         </label>
                     </div>
                     <label className="CheckboxLabel">

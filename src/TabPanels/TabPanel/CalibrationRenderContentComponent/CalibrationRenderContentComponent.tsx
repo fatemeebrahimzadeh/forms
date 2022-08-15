@@ -33,7 +33,7 @@ class CalibrationRenderContentComponent extends Component<IProps> {
             <section className="Calibration">
                 <fieldset className="fieldset outer-field">
                     <legend>
-                        <label >
+                        <label className="CheckboxLabel">
                             <Checkbox
                                 id="cal"
                                 checked={this.props.CAL}
@@ -49,7 +49,8 @@ class CalibrationRenderContentComponent extends Component<IProps> {
                             id="caz"
                             value={this.props.CAZ.toString()}
                             enable={this.enabledCalibrationFieldset}
-                            onChange={(value) => this.props.onChangeHandler(Number(value), 'CAZ')}/>
+                            onChange={(value) => this.props.onChangeHandler(Number(value), 'CAZ')}
+                        />
                     </label>
                     <label>
                         <span>span</span>
@@ -58,7 +59,8 @@ class CalibrationRenderContentComponent extends Component<IProps> {
                             id="cas"
                             value={this.props.CAS.toString()}
                             enable={this.enabledCalibrationFieldset}
-                            onChange={(value) => this.props.onChangeHandler(Number(value), 'CAS')} />
+                            onChange={(value) => this.props.onChangeHandler(Number(value), 'CAS')}
+                        />
                     </label>
                 </fieldset>
             </section>

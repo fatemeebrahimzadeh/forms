@@ -1,10 +1,10 @@
 import "./TagPanelHook.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload, faSearch } from "@fortawesome/free-solid-svg-icons";
-import Input from "../../../../../../UI/Input/Input";
 import { useContext, useEffect, useState } from "react";
 import { FormulaContext, IFormulaPropsContext, IMainArray, isOperationOrParenthesBefore } from "../../../FormulaRenderContentComponent";
 import { ITag } from "../../../../../../@types/entities/tag";
+import Input from "../../../../../../UI/Input/Input";
 
 export interface ITagWithMode extends ITag {
     mode: "ordinary" | "selected",
@@ -107,7 +107,7 @@ export default function TagPanelHook(): JSX.Element {
                 propsContext!.setMainVarible(value!.concat(selectedTag!))
             }
         } else {
-
+            
         }
 
     }

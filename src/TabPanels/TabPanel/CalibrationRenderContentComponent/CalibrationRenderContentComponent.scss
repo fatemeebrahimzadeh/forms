@@ -1,4 +1,4 @@
-.DigitalGeneralRenderContentComponent {
+.Calibration {
     padding-top: 10px;
     width: 100%;
     height: 100%;
@@ -6,9 +6,7 @@
     overflow-x: hidden;
 
     fieldset {
-        padding: 20px !important;
-        display: flex;
-        flex-direction: column;
+        padding: 10px !important;
         label {
             display: flex;
             padding: 10px;
@@ -17,19 +15,24 @@
                 width: 100px;
             }
         }
+
+        .Checkbox {
+            margin-right: 4px;
+        }
     }
 }
 
-@media (max-width: 850px) {
-    .DigitalGeneralRenderContentComponent {
+@media (max-width: 1400px) {
+    .Calibration {
         fieldset {
-            label {
+            label:not(.CheckboxLabel) {
                 span {
-                    min-width: 71px;
+                    min-width: 50px;
+                    width: 20%;
                 }
-                
+
                 .input-field {
-                    width: 50%;
+                    width: 70%;
                     min-width: 70px;
                 }
             }

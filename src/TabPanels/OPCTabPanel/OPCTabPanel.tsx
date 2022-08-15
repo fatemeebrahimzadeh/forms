@@ -34,7 +34,6 @@ class OPCTabPanelComponent extends Component<IProps> {
                 <Item title="General" >
                     {this.props.show && <OPCGeneralRenderContentComponent
                         onChangeHandler={this.props.onChangeHandler}
-                        // TIDMessage={props.TIDMessage}
                         {...this.props.data} />}
                 </Item>
                 <Item title="Sensor Setting" >

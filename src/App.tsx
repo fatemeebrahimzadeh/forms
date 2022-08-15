@@ -5,7 +5,6 @@ import 'devextreme/dist/css/dx.light.css';
 import { useState } from 'react';
 import './App.css';
 import Popup, { IPopupActions } from './UI/Popup/Popup';
-import TabPanel from './TabPanels/AnalogTabPanel/TabPanel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { IDigitalTag } from './@types/entities/digitaltag';
@@ -16,6 +15,7 @@ import VirtualTagTabPanelComponent from './TabPanels/VirtualTagTabPanel/VirtualT
 import OPCTabPanel from './TabPanels/OPCTabPanel/OPCTabPanel';
 import Tag from './FakeData/tags';
 import { ITag } from './@types/entities/tag';
+import TabPanel from './TabPanels/TabPanel/TabPanel';
 
 interface IState {
   analogForm: IAnalogData

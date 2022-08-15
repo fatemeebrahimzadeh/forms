@@ -1,5 +1,4 @@
 import React, { Dispatch, FC, useContext, useEffect, useState } from "react";
-import TextArea from "../../../UI/TextArea/TextArea";
 import "./FormulaRenderContentComponent.scss"
 import { createPanel } from "./PanelCreator/PanelCreator"
 import NumPanelCreator from "./PanelCreator/NumPanelCreator/NumPanelCreator"
@@ -7,6 +6,7 @@ import TagPanelCreator from "./PanelCreator/TagPanelCreator/TagPanelCreator";
 import MultipleTagsPanelCreator from "./PanelCreator/MultipleTagsPanelCreator/MultipleTagsPanelCreator";
 import { ITag } from "../../../@types/entities/tag";
 import { IVirtualTag } from "../../../@types/entities/virtual-tag";
+import TextArea from "../../../UI/TextArea/TextArea";
 
 export type ITagsAndNumbersTabs = "Num" | "Tag" | "Min" | "Ave" | "Max"
 export type IOperationKeys = "C" | "<-" | "(" | ")" | "+" | "-" | "*" | "/"
@@ -116,7 +116,7 @@ const FormulaRenderContentComponent: FC<IProps> = (props) => {
         switch (key) {
             case "*": case "+": case "/": case ")":
                 if (value!.length === 0 || isOperationOrParenthesBefore(value)) {
-
+                    
                 } else {
                     value.push(key + " ")
                 }
@@ -125,12 +125,12 @@ const FormulaRenderContentComponent: FC<IProps> = (props) => {
                 if (value!.length === 0 || isOperationOrParenthesBefore(value)) {
                     value.push(key + " ")
                 } else {
-
+                    
                 }
                 break;
             case "-":
                 if (isOperationOrParenthesBefore(value)) {
-
+                    
                 } else {
                     value.push(key + " ")
                 }
@@ -243,7 +243,7 @@ const FormulaRenderContentComponent: FC<IProps> = (props) => {
                 wrap="off"
                 className={`Formula__textarea`}
                 autoFocus={true}
-            />
+                groupName="VirtualTabPanel" />
             <div className="operationKeys">
                 {keys}
             </div>

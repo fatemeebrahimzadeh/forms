@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./DigitalEventSettingRenderContentComponent.scss"
+import { IDigitalTag } from "../../../@types/entities/digitaltag";
 import Input from "../../../UI/Input/Input";
 import Checkbox from "../../../UI/Checkbox/Checkbox";
 import ColorPicker from "../../../UI/ColorPicker/ColorPicker";
-import { IDigitalTag } from "../../../@types/entities/digitaltag";
 
 interface IProps extends IDigitalTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IDigitalTag) => void
@@ -23,6 +23,7 @@ class DigitalEventSettingRenderContentComponent extends Component<IProps> {
 
     lenFieldsetenableHandler = (prevenabledLenFieldset: boolean) => {
         this.enabledLenFieldset = !prevenabledLenFieldset
+
     }
 
     render() {
@@ -41,42 +42,40 @@ class DigitalEventSettingRenderContentComponent extends Component<IProps> {
                 </fieldset>
                 <fieldset className="outer-field">
                     <legend>    Log Settings    </legend>
-                    <div>
-                        <label>
-                            <span>High Status [1]</span>
-                            <span className="MessageSpan">Message:</span>
-                            <Input
-                                enable={this.enabledLenFieldset}
-                                id="him"
-                                value={this.props.HIM}
-                                onChange={(value) => this.props.onChangeHandler(value, 'HIM')}
-                                groupName="DigitalTabPanel" />
-                            <ColorPicker
-                                id="hic"
-                                defaultValue="#0693E3"
-                                onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'HIC')}
-                                color={this.props.HIC}
-                                enable={this.enabledLenFieldset}
-                            />
-                        </label>
-                        <label>
-                            <span>Low Status [0]</span>
-                            <span className="MessageSpan">Message:</span>
-                            <Input
-                                enable={this.enabledLenFieldset}
-                                id="lom"
-                                value={this.props.LOM}
-                                onChange={(value) => this.props.onChangeHandler(value, 'LOM')}
-                                groupName="DigitalTabPanel" />
-                            <ColorPicker
-                                id="LOC"
-                                defaultValue="#0693E3"
-                                onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'LOC')}
-                                color={this.props.LOC}
-                                enable={this.enabledLenFieldset}
-                            />
-                        </label>
-                    </div>
+                    <label>
+                        <span>High Status [1]</span>
+                        <span className="MessageSpan">Message:</span>
+                        <Input
+                            enable={this.enabledLenFieldset}
+                            id="him"
+                            value={this.props.HIM}
+                            onChange={(value) => this.props.onChangeHandler(value, 'HIM')}
+                        />
+                        <ColorPicker
+                            id="hic"
+                            defaultValue="#0693E3"
+                            onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'HIC')}
+                            color={this.props.HIC}
+                            enable={this.enabledLenFieldset}
+                        />
+                    </label>
+                    <label>
+                        <span>Low Status [0]</span>
+                        <span className="MessageSpan">Message:</span>
+                        <Input
+                            enable={this.enabledLenFieldset}
+                            id="lom"
+                            value={this.props.LOM}
+                            onChange={(value) => this.props.onChangeHandler(value, 'LOM')}
+                        />
+                        <ColorPicker
+                            id="LOC"
+                            defaultValue="#0693E3"
+                            onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'LOC')}
+                            color={this.props.LOC}
+                            enable={this.enabledLenFieldset}
+                        />
+                    </label>
                 </fieldset>
             </section >
         );

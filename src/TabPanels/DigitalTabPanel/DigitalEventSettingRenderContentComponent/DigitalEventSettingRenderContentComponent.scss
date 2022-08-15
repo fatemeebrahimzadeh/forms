@@ -1,6 +1,10 @@
 .DigitalEventSettingRenderContentComponent {
     padding-top: 10px;
-    
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+
     fieldset {
         padding: 20px !important;
         display: flex;
@@ -36,6 +40,15 @@
                 position: absolute;
                 z-index: 100;
                 left: -200px;
+            }
+        }
+    }
+
+    .invalid-input {
+        .validation-group-messages {
+            font-size: 10px;
+            .error-message {
+                width: 100px;
             }
         }
     }

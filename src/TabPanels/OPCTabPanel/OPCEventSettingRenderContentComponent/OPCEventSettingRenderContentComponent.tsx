@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-
-
-
 import "./OPCEventSettingRenderContentComponent.scss"
+import { IOPCTag } from "../../../@types/entities/opc-tag";
 import Input from "../../../UI/Input/Input";
 import ColorPicker from "../../../UI/ColorPicker/ColorPicker";
 import Checkbox from "../../../UI/Checkbox/Checkbox";
-import { IOPCTag } from "../../../@types/entities/opc-tag";
+import Select from "../../../UI/Select/Select";
 
 interface IProps extends IOPCTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IOPCTag) => void
@@ -56,9 +54,10 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                 </fieldset>
                 <fieldset className="outer-field">
                     <legend>    Log Settings    </legend>
-                    <label >
-                        <span>Over High Limit</span>
+                    < >
+                        <span className="overHighSpan">Over High Limit</span>
                         <Input
+                            className="ohvInput"
                             enable={this.enabledLenFieldset}
                             type="number"
                             id="ohv"
@@ -67,22 +66,26 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                         />
                         <span className="MessageSpan">Message</span>
                         <Input
+                            className="ohmInput"
                             enable={this.enabledLenFieldset}
                             id="ohm"
                             value={this.props.OHM}
                             onChange={(value) => this.props.onChangeHandler(value, 'OHM')}
                         />
-                        <ColorPicker
-                            id="ohc"
-                            defaultValue="#0693E3"
-                            onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'OHC')}
-                            color={this.props.OHC}
-                            enable={this.enabledLenFieldset}
-                        />
-                    </label>
-                    <label>
-                        <span>High Limit</span>
+                        <div className="ohcColorPicker">
+                            <ColorPicker
+                                id="ohc"
+                                defaultValue="#0693E3"
+                                onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'OHC')}
+                                color={this.props.OHC}
+                                enable={this.enabledLenFieldset}
+                            />
+                        </div>
+                    </>
+                    <>
+                        <span className="highSpan">High Limit</span>
                         <Input
+                            className="hivInput"
                             enable={this.enabledLenFieldset}
                             type="number"
                             id="hiv"
@@ -91,29 +94,33 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                         />
                         <span className="MessageSpan">Message</span>
                         <Input
+                            className="himInput"
                             enable={this.enabledLenFieldset}
                             id="him"
                             value={this.props.HIM}
                             onChange={(value) => this.props.onChangeHandler(value, 'HIM')}
                         />
-                        <ColorPicker
-                            id="hic"
-                            defaultValue="#0693E3"
-                            onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'HIC')}
-                            color={this.props.HIC}
-                            enable={this.enabledLenFieldset}
-                        />
-                    </label>
-                    <label className="NormalLabel">
-                        <span>Normal</span>
+                        <div className="hicColorPicker">
+                            <ColorPicker
+                                id="hic"
+                                defaultValue="#0693E3"
+                                onChangeHandler={(value) => this.props.onChangeHandler(value.hex, 'HIC')}
+                                color={this.props.HIC}
+                                enable={this.enabledLenFieldset}
+                            />
+                        </div>
+                    </>
+                    <>
+                        <span className="normalSpan">Normal</span>
                         <span className="MessageSpan">Message</span>
                         <Input
+                            className="nmmInput"
                             enable={this.enabledLenFieldset}
                             id="nmm"
                             value={this.props.NMM}
                             onChange={(value) => this.props.onChangeHandler(value, 'NMM')}
                         />
-                        <div className="last-colour-picker">
+                        <div className="last-colour-picker nmcColorPicker">
                             <ColorPicker
                                 id="nmc"
                                 defaultValue="#0693E3"
@@ -122,10 +129,11 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                                 enable={this.enabledLenFieldset}
                             />
                         </div>
-                    </label>
-                    <label>
-                        <span>Low Limit</span>
+                    </>
+                    <>
+                        <span className="lowSpan">Low Limit</span>
                         <Input
+                            className="lovInput"
                             enable={this.enabledLenFieldset}
                             type="number"
                             id="lov"
@@ -134,12 +142,13 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                         />
                         <span className="MessageSpan">Message</span>
                         <Input
+                            className="lomInput"
                             enable={this.enabledLenFieldset}
                             id="lom"
                             value={this.props.LOM}
                             onChange={(value) => this.props.onChangeHandler(value, 'LOM')}
                         />
-                        <div className="last-colour-picker">
+                        <div className="last-colour-picker locColorPicker">
                             <ColorPicker
                                 id="loc"
                                 defaultValue="#0693E3"
@@ -148,10 +157,11 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                                 enable={this.enabledLenFieldset}
                             />
                         </div>
-                    </label>
-                    <label>
-                        <span>Under Low Limit</span>
+                    </>
+                    <>
+                        <span className="underLowSpan">Under Low Limit</span>
                         <Input
+                            className="ulvInput"
                             enable={this.enabledLenFieldset}
                             type="number"
                             id="ulv"
@@ -160,12 +170,13 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                         />
                         <span className="MessageSpan">Message</span>
                         <Input
+                            className="ulmInput"
                             enable={this.enabledLenFieldset}
                             id="ulm"
                             value={this.props.ULM}
                             onChange={(value) => this.props.onChangeHandler(value, 'ULM')}
                         />
-                        <div className="last-colour-picker">
+                        <div className="last-colour-picker ulcColorPicker">
                             <ColorPicker
                                 id="ulc"
                                 defaultValue="#0693E3"
@@ -174,7 +185,7 @@ class OPCEventSettingRenderContentComponent extends Component<IProps> {
                                 enable={this.enabledLenFieldset}
                             />
                         </div>
-                    </label>
+                    </>
                 </fieldset>
             </section >
         );

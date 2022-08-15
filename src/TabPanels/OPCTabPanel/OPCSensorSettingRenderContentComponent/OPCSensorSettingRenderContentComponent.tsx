@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./OPCSensorSettingRenderContentComponent.scss"
-
 import Checkbox from "../../../UI/Checkbox/Checkbox";
 import Input from "../../../UI/Input/Input";
+import Select from "../../../UI/Select/Select";
+import "./OPCSensorSettingRenderContentComponent.scss"
 import { IOPCTag } from "../../../@types/entities/opc-tag";
 
 interface IProps extends IOPCTag {

@@ -133,3 +133,27 @@ $background-light: #e8e8e8;
         }
     }
 }
+
+@media (max-width: 1800px) {
+    .TagPanel {
+        .TagPanel__Input {
+            width: 310px;
+        }
+
+        .TagPanel__Tags {
+            width: 310px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .TagPanel {
+        .TagPanel__Input {
+            width: 250px;
+        }
+
+        .TagPanel__Tags {
+            width: 250px;
+        }
+    }
+}

@@ -2,11 +2,12 @@
 import { useContext, useEffect, useState } from "react";
 import "./MultipleTagsPanelHook.scss"
 import { FormulaContext, IFormulaPropsContext, IMainArray, isOperationOrParenthesBefore } from "../../../FormulaRenderContentComponent";
-import Input from "../../../../../../UI/Input/Input";
 import { faSearch, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Checkbox from "../../../../../../UI/Checkbox/Checkbox";
 import { ITagWithMode } from "../TagPanelHook/TagPanelHook"
+import { ITag } from "../../../../../../@types/entities/tag";
+import Input from "../../../../../../UI/Input/Input";
+import Checkbox from "../../../../../../UI/Checkbox/Checkbox";
 
 export default function MultipleTagsPanelHook(): JSX.Element {
 
@@ -118,7 +119,7 @@ export default function MultipleTagsPanelHook(): JSX.Element {
                 propsContext!.setMainVarible(value!.concat(selectedTags))
             }
         } else {
-
+           
         }
     }
 

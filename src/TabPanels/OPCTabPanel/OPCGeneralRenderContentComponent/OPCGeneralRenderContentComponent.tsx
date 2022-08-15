@@ -2,9 +2,9 @@ import React, { Component, createRef } from "react"
 
 import "./OPCGeneralRenderContentComponent.scss"
 import { IOPCTag } from "../../../@types/entities/opc-tag"
-import Checkbox from "../../../UI/Checkbox/Checkbox"
+import { TextArea } from "devextreme-react"
 import Input from "../../../UI/Input/Input"
-import TextArea from "../../../UI/TextArea/TextArea"
+import Checkbox from "../../../UI/Checkbox/Checkbox"
 
 interface IProps extends IOPCTag {
     onChangeHandler: (value: number | string | boolean, fieldName: keyof IOPCTag) => void
@@ -74,7 +74,7 @@ class OPCGeneralRenderContentComponent extends Component<IProps> {
                             className="first-fieldset__SOATextArea"
                             id="soa"
                             value={this.props.SOA}
-                            onChange={(value) => this.props.onChangeHandler(value, 'SOA')}
+                            onChange={(value) => this.props.onChangeHandler(value.toString(), 'SOA')}
                         />
                     </label>
                 </fieldset>

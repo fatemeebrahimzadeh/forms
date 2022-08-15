@@ -10,29 +10,63 @@
 
     .SensorSetting__first-fieldset {
         padding-left: 20px;
-        display: flex;
-        justify-content: space-evenly;
         width: 45%;
+        display: grid;
+
+        grid-template-areas:
+            "emptyLable rawLable scaledLable"
+            "lowLable spnInput ssnInput"
+            "highLable spxInput ssxInput";
+        gap: 15px;
 
         .Checkbox,
         .Select {
-            margin: 5px;
+            margin-right: 5px;
         }
 
-        .SensorSetting__first-fieldset-labels {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 80%;
-            width: 40px;
+        .emptyLable {
+            grid-area: emptyLable;
         }
 
-        .SensorSetting__first-fieldset-inputs {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 80%;
+        .lowLable {
+            grid-area: lowLable;
+        }
 
+        .highLable {
+            grid-area: highLable;
+        }
+
+        .rawLable {
+            grid-area: rawLable;
+        }
+
+        .spnInput {
+            grid-area: spnInput;
+            input {
+                width: 100px;
+            }
+        }
+
+        .spxInput {
+            grid-area: spxInput;
+            input {
+                width: 100px;
+            }
+        }
+
+        .scaledLable {
+            grid-area: scaledLable;
+        }
+
+        .ssnInput {
+            grid-area: ssnInput;
+            input {
+                width: 100px;
+            }
+        }
+
+        .ssxInput {
+            grid-area: ssxInput;
             input {
                 width: 100px;
             }
@@ -41,9 +75,6 @@
         .Input,
         label {
             font-size: 12px;
-            margin: 5px;
-            position: relative;
-            width: 88%;
         }
     }
 
@@ -54,9 +85,15 @@
         justify-content: center;
         width: 45%;
 
-        label {
+        label:not(.CheckboxLabel) {
             display: grid;
             grid-template-columns: 50% 50%;
+            padding: 10px;
+        }
+
+        .CheckboxLabel {
+            display: grid;
+            grid-template-columns: 50% 15px;
             padding: 10px;
         }
     }
@@ -64,9 +101,8 @@
     .invalid-input {
         .validation-group-messages {
             font-size: 10px;
-            margin-left: 5px;
             .error-message {
-                position: initial;
+                width: 100px;
             }
         }
     }
@@ -82,6 +118,25 @@
             min-height: 120px;
 
             label {
+                .Select {
+                    max-width: 100px;
+                }
+            }
+        }
+
+        fieldset:not(.SensorSetting__first-fieldset) {
+            label {
+                display: grid;
+                grid-template-columns: 30% 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .SensorSetting {
+        fieldset {
+            label {
                 .custom-input {
                     width: 30%;
                     .input__details {
@@ -96,13 +151,6 @@
                 .Select {
                     max-width: 70px;
                 }
-            }
-        }
-
-        fieldset:not(.SensorSetting__first-fieldset) {
-            label {
-                display: grid;
-                grid-template-columns: 30% 50%;
             }
         }
     }

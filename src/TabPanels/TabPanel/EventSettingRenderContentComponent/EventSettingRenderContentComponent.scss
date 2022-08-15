@@ -1,4 +1,4 @@
-.OPCEventSetting {
+.EventSetting {
     padding-top: 10px;
     width: 100%;
     height: 100%;
@@ -28,11 +28,11 @@
         padding: 10px !important;
         display: grid;
         grid-template-areas:
-            "overHighSpan ohvInput MessageSpan ohmInput ohcColorPicker"
-            "highSpan hivInput MessageSpan himInput hicColorPicker"
-            "normalSpan normalSpan MessageSpan nmmInput nmcColorPicker"
-            "lowSpan lovInput MessageSpan lomInput locColorPicker"
-            "underLowSpan ulvInput MessageSpan ulmInput ulcColorPicker";
+            "overHighSpan ohvInput MessageSpan ohmInput OutputSpan ohdSelect ohcColorPicker"
+            "highSpan hivInput MessageSpan himInput OutputSpan hidSelect hicColorPicker"
+            "normalSpan normalSpan MessageSpan nmmInput OutputSpan lodSelect nmcColorPicker"
+            "lowSpan lovInput MessageSpan lomInput OutputSpan uldSelect locColorPicker"
+            "underLowSpan ulvInput MessageSpan ulmInput OutputSpan emptySelect ulcColorPicker";
         gap: 10px;
 
         .normalSpan {
@@ -72,8 +72,8 @@
 
             .picker-plot {
                 position: absolute;
-                z-index: 100;
-                left: -178px;
+                z-index: 200000;
+                // left: -178px;
             }
         }
 
@@ -87,10 +87,14 @@
 
             .picker-plot {
                 position: absolute;
-                z-index: 100;
+                // z-index: 100;
                 top: -100px;
                 left: -178px;
             }
+        }
+
+        select {
+            height: 22px;
         }
 
         .invalid-input {
@@ -105,7 +109,7 @@
 }
 
 @media (max-width: 1800px) {
-    .OPCEventSetting {
+    .EventSetting {
         fieldset:not(.EventSetting-first-fieldset) {
             .custom-input {
                 width: 30%;
@@ -122,7 +126,7 @@
 }
 
 @media (max-width: 1700px) {
-    .OPCEventSetting {
+    .EventSetting {
         fieldset:not(.EventSetting-first-fieldset) {
             .custom-input {
                 width: 30%;
@@ -139,23 +143,45 @@
 }
 
 @media (max-width: 1500px) {
-    .OPCEventSetting {
+    .EventSetting {
         .EventSetting-first-fieldset {
             flex-direction: column;
             .CheckboxLabel {
                 padding-bottom: 5px;
             }
-        }
 
+            label:not(.CheckboxLabel) {
+                span {
+                    min-width: 71px;
+                }
+
+                .input-field {
+                    width: 70%;
+                    min-width: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 800px) {
+    .EventSetting {
         fieldset:not(.EventSetting-first-fieldset) {
-            .custom-input {
-                width: 30%;
-                .input__details {
-                    width: inherit;
-                    .input-field {
-                        width: inherit;
-                        min-width: 70px;
+            .color-picker {
+                display: flex;
+                justify-content: center;
+
+                .twitter-picker {
+                    top: 33px;
+                    div:nth-child(2) {
+                        left: 212px !important;
                     }
+                }
+
+                .picker-plot {
+                    position: absolute;
+                    // z-index: 100;
+                    left: -178px;
                 }
             }
         }

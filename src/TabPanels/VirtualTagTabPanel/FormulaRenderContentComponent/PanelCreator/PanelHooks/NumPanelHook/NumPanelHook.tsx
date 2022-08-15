@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import "./NumPanelHook.scss"
-import TextArea from "../../../../../../UI/TextArea/TextArea";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormulaContext, IFormulaPropsContext, isOperationOrParenthesBefore } from "../../../FormulaRenderContentComponent";
+import TextArea from "../../../../../../UI/TextArea/TextArea";
 
 export type INumberKeys = "7" | "8" | "9" | "4" | "5" | "6" | "1" | "2" | "3" | "<-" | "0" | "."
 
@@ -60,7 +60,7 @@ export default function NumPanelHook(): JSX.Element {
                 setNumPanelTextArea("")
             }
         } else {
-
+           
         }
 
     }

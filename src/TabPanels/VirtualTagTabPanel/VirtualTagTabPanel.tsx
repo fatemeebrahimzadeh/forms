@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import TabPanel, { Item } from "devextreme-react/tab-panel"
+import "./VirtualTagTabPanel.scss"
+
 import VirtualGeneralRenderContentComponent from "./VirtualGeneralRenderContentComponent/VirtualGeneralRenderContentComponent"
 import FormulaRenderContentComponent, { IFormulaPropsContext } from "./FormulaRenderContentComponent/FormulaRenderContentComponent"
+
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 import { ITag } from "../../@types/entities/tag";
